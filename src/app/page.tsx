@@ -2,6 +2,11 @@ import Image from "next/image";
 import Header from "../components/Header";
 import Hero from "../components/Hero";
 import Welcome from "../components/Welcome";
+import ServicesSection from "../components/ServiceSection";
+import DeliciousFoodsSection from "../components/DeliciousFoodsSection";
+import FoodGallerySection from "../components/FoodGallerySection";
+import TestimonialSection from "../components/TestimonialSection";
+import ReservationSection from "../components/ReservationSection";
 
 export default function Home() {
   return (
@@ -10,6 +15,11 @@ export default function Home() {
         <Header/>
         <Hero/>
         <Welcome/>
+        <ServicesSection/>
+        <DeliciousFoodsSection/>
+        <FoodGallerySection/>
+        <TestimonialSection/>
+        <ReservationSection/>
       </main>
       <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
         <a

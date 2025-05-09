@@ -1,5 +1,6 @@
 import { ChevronDown, ArrowRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import Image from 'next/image';
 
 export default function Header() {
   return (
@@ -25,9 +26,11 @@ export default function Header() {
         <div className="flex justify-between items-center mx-4 py-4">
           {/* Logo */}
           <div className="flex items-center gap-2 font-bold text-lg">
-            {/* Substitua por <Image src="/logo.svg" ... /> se tiver logo */}
-            <div className="w-6 h-6 rounded-full bg-red-600" />
-            DELISH
+            <Image src="/logo.png"   
+              alt="TASTELY"
+              width={45}
+              height={50}/>
+            TASTELY 
           </div>
 
           {/* Navigation */}
@@ -51,7 +54,7 @@ export default function Header() {
           </nav>
 
           {/* Call to action */}
-          <Button variant="outline" className="border-red-600 text-white hover:bg-red-600 rounded-none">
+          <Button variant="outline" className="custom-border text-white hover:custom-bg rounded-none bg-black">
             BOOK A TABLE
             <ArrowRight className="ml-2 w-4 h-4" />
           </Button>

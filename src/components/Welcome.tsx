@@ -14,8 +14,13 @@ export default function WelcomeSection() {
 
       {/* Container principal centralizado */}
       <div className="flex flex-col md:flex-row items-center gap-12 max-w-7xl w-full justify-center">
-        {/* Placeholder cinza */}
-        <div className="w-[280px] h-[280px] bg-gray-300 flex-shrink-0" />
+        <Image
+        src="/images/restaurante.jpg"
+        alt="Broccoli"
+        width={600}
+        height={600}
+        className=""
+      />
 
         {/* Conteúdo textual */}
         <div className="max-w-xl text-left">
