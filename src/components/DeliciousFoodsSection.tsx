@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button"
 import { FoodItemCard } from "@/components/fragment/FoodItemCard"
 import { FoodListItem } from "@/components/fragment/FoodListItem"
+import Image from 'next/image';
 
 export default function DeliciousFoodsSection() {
   return (
@@ -31,7 +32,14 @@ export default function DeliciousFoodsSection() {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto">
         {/* Left column */}
         <div className="bg-white border rounded shadow p-4">
-          <div className="h-40 bg-gray-200 rounded mb-4" />
+          <div className="relative w-full h-64">
+            <Image
+                src="/images/menu.png"
+                alt="menu"
+                fill
+                className="object-cover"
+              />
+          </div>
           <FoodListItem title="Braised Short Ribs" description="Non nisi est sit amet facilisis magna" price="$15.00" />
           <FoodListItem title="Roasted Vegetable Platter" description="Non nisi est sit amet facilisis magna" price="$15.00" />
           <FoodListItem title="Classic Caesar Salad" description="Non nisi est sit amet facilisis magna" price="$15.00" />
@@ -41,12 +49,12 @@ export default function DeliciousFoodsSection() {
 
         {/* Right grid */}
         <div className="md:col-span-2 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          <FoodItemCard title="Classic Caesar Salad" price="$15.00" rating={5} />
-          <FoodItemCard title="Braised Short Ribs" price="$15.00" rating={5} />
-          <FoodItemCard title="Chicken Masala" price="$15.00" rating={5} />
-          <FoodItemCard title="Chicken Alfredo Pasta" price="$15.00" rating={5} />
-          <FoodItemCard title="Vegan Buddha Bowl" price="$15.00" rating={5} />
-          <FoodItemCard title="Chocolate Lava Cake" price="$15.00" rating={5} />
+          <FoodItemCard title="Classic Caesar Salad" price="$15.00" rating={5} image="/images/caesar.png" />
+          <FoodItemCard title="Braised Short Ribs" price="$15.00" rating={5} image="/images/Ribs.png" />
+          <FoodItemCard title="Chicken Masala" price="$15.00" rating={5} image="/images/Masala.png"/>
+          <FoodItemCard title="Chicken Alfredo Pasta" price="$15.00" rating={5} image="/images/alfredo.png"/>
+          <FoodItemCard title="Vegan Buddha Bowl" price="$15.00" rating={5} image="/images/vegan.png"/>
+          <FoodItemCard title="Chocolate Lava Cake" price="$15.00" rating={5} image="/images/chocolate.png"/>
         </div>
       </div>
     </section>

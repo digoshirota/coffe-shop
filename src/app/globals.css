@@ -136,6 +136,16 @@
     width: 6px;
     height:6px;
   }
+  .clip-path-date {
+    clip-path: polygon(0 0, 100% 0, 85% 100%, 0% 100%);
+  }
+  .avatar1{
+    position: relative;
+    background-position: -3px -12px;
+    background-repeat: no-repeat;
+    background-size: 58px;
+  }
+
 }
 body{
   font-family: 'Jost', sans-serif;

@@ -3,15 +3,7 @@ import Image from 'next/image';
 export default function WelcomeSection() {
   return (
     <section className="relative bg-white min-h-screen flex items-center justify-center px-4 md:px-16 py-16 overflow-hidden">
-      {/* Brócolis no canto */}
-      <Image
-        src="/images/broccoli.png"
-        alt="Broccoli"
-        width={80}
-        height={80}
-        className="absolute top-8 left-4 md:left-16"
-      />
-
+      
       {/* Container principal centralizado */}
       <div className="flex flex-col md:flex-row items-center gap-12 max-w-7xl w-full justify-center">
         <Image
@@ -51,14 +43,7 @@ export default function WelcomeSection() {
         </div>
       </div>
 
-      {/* Hambúrguer decorativo à direita (opcional) */}
-      <Image
-        src="/images/burger-deco.png"
-        alt="Burger"
-        width={120}
-        height={120}
-        className="absolute top-8 right-4 md:right-16 opacity-20"
-      />
+      
     </section>
   );
 }

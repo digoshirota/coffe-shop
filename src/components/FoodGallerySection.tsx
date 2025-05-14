@@ -1,12 +1,19 @@
 import { Eye } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import Image from 'next/image';
 
 export default function FoodGallerySection() {
   const stats = [
-    { value: 15, label: "New Cool Projects" },
+    { value: 15, label: "New Cool Projects"},
     { value: 15, label: "Total Awards Win" },
     { value: 20, label: "Unique Food Specialities" },
     { value: 69, label: "Hard Team Members" },
+  ]
+  const images = [
+    { value: 'Classic Caesar Salad', image: "/images/caesar.png"},
+    { value: 'Braised Short Ribs', image: "/images/Ribs.png" },
+    { value: 'Chicken Masala', image: "/images/Masala.png" },
+    { value: 'Chicken Alfredo Pasta', image: "/images/alfredo.png" },
   ]
 
   return (
@@ -35,13 +42,21 @@ export default function FoodGallerySection() {
 
         {/* Grid de imagens com efeito hover */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-          {[...Array(4)].map((_, i) => (
+          {images.map((image, i) => (
             <div
               key={i}
               className="relative aspect-square bg-gray-300 group overflow-hidden"
             >
-              <div className="absolute inset-0 bg-[#e94f1d] opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
-                <Eye className="text-white w-6 h-6" />
+              <div className="absolute inset-0 bg-[#e94f1d] bg-cover bg-center  transition duration-300 flex items-center justify-center"
+              style={{
+                backgroundImage: `url('${image.image}')`,
+              }}
+              >
+              </div>
+              <div className="absolute inset-0 bg-[#e94f1d] opacity-0 group-hover:opacity-80 transition duration-300 flex items-center justify-center"
+              
+              >
+                <p className="text-sm uppercase tracking-wide mt-2">{image.value}</p>
               </div>
             </div>
           ))}

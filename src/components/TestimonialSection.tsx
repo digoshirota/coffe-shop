@@ -5,14 +5,14 @@ export default function TestimonialSection() {
     {
       name: "Amanda Martin",
       role: "Food Reviewer",
-      avatar: "", // aqui você pode colocar o src do avatar se quiser
+      avatar: "avatar1", // aqui você pode colocar o src do avatar se quiser
       message:
         "The only minor downside was the noise level, which made conversation a bit challenging at times. However, this did not significantly detract from the overall experience. The Culinary Corner excels in delivering delicious food and exceptional service.",
     },
     {
       name: "Amanda Martin",
       role: "Food Reviewer",
-      avatar: "",
+      avatar: "avatar2",
       message:
         "The only minor downside was the noise level, which made conversation a bit challenging at times. However, this did not significantly detract from the overall experience. The Culinary Corner excels in delivering delicious food and exceptional service.",
     },
@@ -49,7 +49,10 @@ export default function TestimonialSection() {
             >
               <p className="text-sm leading-relaxed mb-6">{testimonial.message}</p>
               <div className="flex items-center gap-4">
-                <div className="w-10 h-10 rounded-full bg-gray-300"></div>
+                <div
+                  className="w-12 h-12 rounded-full bg-cover bg-center avatar1"
+                  style={{ backgroundImage: `url('/images/${testimonial.avatar}.png')` }}
+                ></div>
                 <div>
                   <p className="font-semibold">{testimonial.name}</p>
                   <p className="text-xs text-gray-500">{testimonial.role}</p>

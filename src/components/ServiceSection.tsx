@@ -27,12 +27,12 @@ export default function ServicesSection() {
         <ServiceCard
           title="BUFFET SERVICE"
           description="Assertively myocardinate robust e-tailers for extensible human capital."
-          image="/images/weeding.jpg"
+          image="/images/buffet.png"
         />
         <ServiceCard
           title="PARTY SERVICE"
           description="Assertively myocardinate robust e-tailers for extensible human capital."
-          image="/images/weeding.jpg"
+          image="/images/party.png"
         />
       </div>
     </section>
