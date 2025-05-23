@@ -11,7 +11,6 @@ export default function BlogDetail() {
     <div className="">
       <main className="">
         <Header/>
-        <Hero/>
         <BlogDetails />
         <Footer2/>
       </main>

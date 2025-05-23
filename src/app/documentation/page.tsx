@@ -190,6 +190,26 @@ export default function Documentation() {
                     <p>├── README.md              # Project documentation and setup instructions</p>
                     <p>├── tsconfig.json          # TypeScript compiler options</p>
                 </div>
+                <div className="bg-gray-100 p-4 rounded font-mono text-sm space-y-1">
+                    <p>├── app/                      # Root directory for routes using the App Router</p>
+                    <p>│   ├── about-us/             # Page route: /about-us</p>
+                    <p>│   ├── book-table/           # Page route: /book-table</p>
+                    <p>│   ├── chefs/                # Page route: /chefs</p>
+                    <p>│   ├── contact-us/           # Page route: /contact-us</p>
+                    <p>│   ├── documentation/        # Page route: /documentation</p>
+                    <p>│   ├── food-gallery-posts/   # Page route: /food-gallery-posts</p>
+                    <p>│   ├── latest-news/          # Page route: /latest-news</p>
+                    <p>│   ├── menu/                 # Page route: /menu</p>
+                    <p>│   ├── our-chefs/            # Page route: /our-chefs</p>
+                    <p>│   ├── shop/                 # Page route: /shop</p>
+                    <p>│   ├── favicon.ico           # Website favicon</p>
+                    <p>│   ├── globals.css           # Global CSS styles</p>
+                    <p>│   ├── layout.tsx            # Shared layout wrapper for all routes</p>
+                    <p>│   └── page.tsx              # Root index page (route: /)</p>
+                    <p>├── components/               # Reusable UI components</p>
+                    <p>└── lib/                      # Utility functions, services, or configurations</p>
+                </div>
+
 
 
 

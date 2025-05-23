@@ -59,7 +59,7 @@ export default function Header() {
         <div className="flex justify-between items-center mx-4 py-4">
           {/* Logo */}
           <div className="flex items-center gap-2 font-bold text-lg">
-            <Image src="/logo.png" alt="TASTELY" width={45} height={50} />
+            <Image src="/logo.png" alt="TASTELY" width={60} height={60} />
             TASTELY
           </div>
 
