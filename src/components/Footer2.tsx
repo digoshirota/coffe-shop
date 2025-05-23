@@ -66,7 +66,7 @@ export default function Footer() {
             className=""
           >Meet our team</Link></li>
             <li><Link
-            href={`/latest-news`}
+            href={`/latest-news?page=1`}
             className=""
           >Latest News</Link></li>
             <li><Link
