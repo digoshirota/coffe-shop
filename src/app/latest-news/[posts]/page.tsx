@@ -4,22 +4,15 @@ import Hero from "../../../components/Hero";
 import Footer2 from "../../../components/Footer2";
 import BlogDetails from "./component/BlogDetails";
 
+export default function BlogDetail() {
 
-
-
-
-
-
-export default function Contact() {
+  
   return (
     <div className="">
       <main className="">
         <Header/>
         <Hero/>
-        <BlogDetails/>
-        
-    
-
+        <BlogDetails />
         <Footer2/>
       </main>
     </div>

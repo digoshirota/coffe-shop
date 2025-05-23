@@ -1,6 +1,16 @@
 import { Input } from "@/components/ui/input"
 import { ArrowRight, Search, User } from "lucide-react"
 import Image from "next/image"
+import Link from "next/link";
+
+const images = [
+  { value: 'Classic Caesar Salad', image: "/images/caesar.png", postName: "latest-news/caesar" },
+  { value: 'Braised Short Ribs', image: "/images/Ribs.png", postName: "latest-news/Ribs" },
+  { value: 'Chicken Masala', image: "/images/Masala.png", postName: "latest-news/Masala" },
+  { value: 'Chicken Alfredo Pasta', image: "/images/alfredo.png", postName: "latest-news/alfredo" },
+  { value: 'Chocolate Lava Cake', image: "/images/chocolate.png", postName: "latest-news/chocolate" },
+  { value: 'Vegan Buddha Bowl', image: "/images/vegan.png", postName: "latest-news/vegan" },
+]
 
 export default function Sidebar() {
   return (
@@ -24,16 +34,28 @@ export default function Sidebar() {
             "Restaurants Are Adapting to Changing Dietary Trends",
             "Passion and Perseverance from Renowned Chefs",
           ].map((title, idx) => (
+
             <li key={idx} className="flex gap-3">
-              <div className="bg-gray-300 w-10 h-10" />
-              <div className="text-sm text-gray-800">
-                <div className="flex items-center gap-1 text-gray-500 text-xs">
-                  <User className="w-3 h-3" />
-                  by David Smith
+              <Link href={`/latest-news/name-post`} className="flex gap-3">
+                <div className="w-15 h-15 relative">
+                  <Image
+                    src={`/images/food-blog.png`}
+                    alt="food-blog"
+                    fill
+                    className="object-cover"
+                  />
                 </div>
-                <p className="font-medium leading-tight">{title}</p>
-              </div>
+                <div className="text-sm text-gray-800 w-70">
+                  <div className="flex items-center gap-1 text-gray-500 text-xs">
+                    <User className="w-3 h-3" />
+                    by David Smith
+                  </div>
+                  <p className="font-medium leading-tight">{title}</p>
+                </div>
+
+              </Link>
             </li>
+
           ))}
         </ul>
       </div>
@@ -62,40 +84,56 @@ export default function Sidebar() {
       {/* Gallery */}
       <div className="bg-white shadow p-5">
         <h3 className="text-lg font-bold uppercase mb-4">Gallery</h3>
-        <div className="grid grid-cols-3 gap-2">
-          {Array.from({ length: 6 }).map((_, i) => (
-            <div key={i} className="bg-gray-300 aspect-square" />
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+          {images.map((image, i) => (
+            <Link href={`/${image.postName}`} className="underline hover:text-white">
+              <div
+                key={i}
+                className="relative aspect-square bg-gray-300 group overflow-hidden"
+              >
+                <div className="absolute inset-0 bg-[#e94f1d] bg-cover bg-center  transition duration-300 flex items-center justify-center"
+                  style={{
+                    backgroundImage: `url('${image.image}')`,
+                  }}
+                >
+                </div>
+                <div className="absolute inset-0 bg-[#e94f1d] opacity-0 group-hover:opacity-80 transition duration-300 flex items-center justify-center p-5"
+
+                >
+                  <p className="text-sm uppercase tracking-wide mt-2">{image.value}</p>
+                </div>
+              </div>
+            </Link>
           ))}
         </div>
       </div>
-       {/* Popular Tags */}
-       <div className="bg-white shadow p-5">
-            <h3 className="text-lg font-bold uppercase mb-4">Popular Tags</h3>
-            <div className="flex flex-wrap gap-2">
-            {[
-                { tag: "ADVICE", active: true },
-                { tag: "AUTHOR" },
-                { tag: "CONSULTING" },
-                { tag: "DELISH" },
-                { tag: "FAMILY" },
-                { tag: "HEALTH" },
-                { tag: "TIP" },
-                { tag: "JUDGE" },
-                { tag: "SOLUTION" },
-            ].map(({ tag, active }) => (
-                <span
-                key={tag}
-                className={`text-sm px-3 py-1 font-medium border ${
-                    active
-                    ? "bg-[#e94f1d] text-white border-red-600"
-                    : "bg-white text-black"
+      {/* Popular Tags */}
+      <div className="bg-white shadow p-5">
+        <h3 className="text-lg font-bold uppercase mb-4">Popular Tags</h3>
+        <div className="flex flex-wrap gap-2">
+          {[
+            { tag: "ADVICE", active: true },
+            { tag: "AUTHOR" },
+            { tag: "CONSULTING" },
+            { tag: "DELISH" },
+            { tag: "FAMILY" },
+            { tag: "HEALTH" },
+            { tag: "TIP" },
+            { tag: "JUDGE" },
+            { tag: "SOLUTION" },
+          ].map(({ tag, active }) => (
+            <span
+              key={tag}
+              className={`text-sm px-3 py-1 font-medium border ${active
+                ? "bg-[#e94f1d] text-white border-red-600"
+                : "bg-white text-black"
                 }`}
-                >
-                {tag}
-                </span>
-            ))}
-            </div>
+            >
+              {tag}
+            </span>
+          ))}
         </div>
+      </div>
     </aside>
   )
 }

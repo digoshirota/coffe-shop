@@ -31,10 +31,11 @@ export default function BookTable() {
             onChange={handleChange}
             className="bg-transparent border border-gray-500 px-4 py-2 rounded text-white"
           >
-            <option value="">Person</option>
-            <option value="1">1 Person</option>
-            <option value="2">2 People</option>
-            <option value="4">4 People</option>
+            
+            <option className='text-black' value="1">1 Person</option>
+            <option className='text-black' value="2">2 People</option>
+            <option className='text-black' value="4">4 People</option>
+            <option className='text-black'  value="5">5 Person</option>
           </select>
 
           <input
@@ -49,10 +50,10 @@ export default function BookTable() {
             onChange={handleChange}
             className="bg-transparent border border-gray-500 px-4 py-2 rounded text-white"
           >
-            <option value="">Time</option>
-            <option value="11:00">11:00 AM</option>
-            <option value="13:00">1:00 PM</option>
-            <option value="18:00">6:00 PM</option>
+            <option className='text-black' value="">Time</option>
+            <option className='text-black' value="11:00">11:00 AM</option>
+            <option className='text-black' value="13:00">1:00 PM</option>
+            <option className='text-black' value="18:00">6:00 PM</option>
           </select>
 
           <button

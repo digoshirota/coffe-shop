@@ -29,7 +29,7 @@ const navItems = [
     name: 'BLOG',
     dropdown: true,
     items: [
-      { name: 'Latest Posts', href: '/latest-news' },
+      { name: 'Latest Posts', href: '/latest-news?page=1' },
     ],
   },
   { name: 'CONTACT', href: '/contact-us', dropdown: false },
@@ -47,7 +47,7 @@ export default function Header() {
             <span>Thurs-Sat: 11a-10p</span>
           </div>
           <div className="flex gap-4 items-center text-xs">
-            <span>reservations@delish.com</span>
+            <span>reservations@TASTELY.com</span>
             <span className="w-2 h-2 bg-zinc-500 rotate-45" />
             <span>123 456 7899</span>
             <span className="w-2 h-2 bg-zinc-500 rotate-45" />

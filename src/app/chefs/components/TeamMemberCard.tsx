@@ -1,11 +1,13 @@
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import { MailIcon, PhoneIcon, PrinterIcon , BriefcaseIcon } from "lucide-react"
+import { MailIcon, PhoneIcon, PrinterIcon, BriefcaseIcon } from "lucide-react"
+import Link from "next/link";
+import Image from 'next/image';
 
 export default function TeamMemberCard() {
   return (
-    <div className="bg-[#f8f8f8] p-8 rounded-lg grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-      <div>
+    <div className="bg-[#f8f8f8] p-8 m-8 rounded-lg grid grid-cols-1 md:grid-cols-2 gap-8 items-center max-w-6xl mx-auto">
+      <div className="">
         <h2 className="text-2xl font-bold text-black">Richard John</h2>
         <p className="text-sm text-red-600 font-semibold mt-1">Founder & CEO</p>
         <p className="text-sm text-gray-600 mt-4">
@@ -56,13 +58,22 @@ export default function TeamMemberCard() {
             </CardContent>
           </Card>
         </div>
+        <Link href={`/contact-us`} className="underline hover:text-white">
+          <Button className="mt-6 bg-[#e94f1d] hover:bg-red-700 text-white">
+            Contact Me
+          </Button>
+        </Link>
 
-        <Button className="mt-6 bg-[#e94f1d] hover:bg-red-700 text-white">
-          Contact Me
-        </Button>
+      </div>
+      <div className="w-full h-100 relative">
+        <Image
+          src="/images/ceo.png"
+          alt="ceo"
+          fill
+          className="object-cover"
+        />
       </div>
 
-      <div className="w-full h-80 bg-gray-300 rounded-lg"></div> {/* Placeholder para imagem */}
     </div>
   )
 }

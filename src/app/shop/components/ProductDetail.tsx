@@ -1,15 +1,23 @@
+'use client';
 import { notFound } from 'next/navigation';
+import Image from 'next/image';
+import {
+  Tabs,
+  TabsList,
+  TabsTrigger,
+  TabsContent,
+} from '@/components/ui/tabs';
 
 const fakeMenu = {
-    name: 'Grilled Lemon Herb Chicken',
-    priceRange: [260, 360],
-    rating: 5,
-    reviews: 1,
-    sku: '17',
-    categories: ['Light Bulb', 'Table'],
-    tags: ['Illuminate', 'Textured'],
-    description: `Eget taciti odio cum habitant egestas conubia turpis phasellus.`,
-    fullDescription: `
+  name: 'Grilled Lemon Herb Chicken',
+  priceRange: [260, 360],
+  rating: 5,
+  reviews: 1,
+  sku: '17',
+  categories: ['Light Bulb', 'Table'],
+  tags: ['Illuminate', 'Textured'],
+  description: `Eget taciti odio cum habitant egestas conubia turpis phasellus.`,
+  fullDescription: `
       Credibly negotiate emerging materials... (continue long text).
     `
 };
@@ -23,7 +31,14 @@ export default function ProductDetail() {
       {/* Image Placeholder */}
       <div className="bg-gray-100 h-96 flex items-center justify-center relative">
         <span className="absolute top-2 left-2 bg-[#e94f1d] text-white px-2 py-1 text-xs rounded">SALE</span>
-        <span className="text-gray-400">Image here</span>
+        <div className="w-full h-[400px] relative">
+          <Image
+            src={`/images/roasted-vegetable-platter.png`}
+            alt="ceo"
+            fill
+            className="object-cover"
+          />
+        </div>
       </div>
 
       {/* Info */}
@@ -56,16 +71,45 @@ export default function ProductDetail() {
           <p><strong>Tags:</strong> {dish.tags.join(', ')}</p>
         </div>
       </div>
-
-      {/* Tabs */}
       <div className="col-span-1 md:col-span-2 mt-10 border-t pt-6">
-        <div className="flex gap-6 border-b pb-2">
-          <button className="font-semibold text-black border-b-2 border-red-600">Description</button>
-          <button className="text-gray-500">Additional Information</button>
-          <button className="text-gray-500">Review (03)</button>
-        </div>
-        <p className="mt-6 text-sm text-gray-700">{dish.fullDescription}</p>
+        <Tabs defaultValue="description" className="w-full mt-10 tabs-custom">
+          <TabsList className="flex gap-6 border-b p-0 bg-transparent shadow-none">
+            <TabsTrigger
+              value="description"
+              className="text-sm font-medium text-muted-foreground data-[state=active]:text-black data-[state=active]:border-b-2 data-[state=active]:border-[#e94f1d] rounded-none px-0 py-2"
+            >
+              Description
+            </TabsTrigger>
+            <TabsTrigger
+              value="info"
+              className="text-sm font-medium text-muted-foreground data-[state=active]:text-black data-[state=active]:border-b-2 data-[state=active]:border-[#e94f1d] rounded-none px-0 py-2"
+            >
+              Additional Information
+            </TabsTrigger>
+            <TabsTrigger
+              value="review"
+              className="text-sm font-medium text-muted-foreground data-[state=active]:text-black data-[state=active]:border-b-2 data-[state=active]:border-[#e94f1d] rounded-none px-0 py-2"
+            >
+              Review (03)
+            </TabsTrigger>
+          </TabsList>
+
+          <TabsContent value="description" className="mt-6 text-sm text-gray-700">
+            {dish.fullDescription}
+          </TabsContent>
+          <TabsContent value="info" className="mt-6 text-sm text-gray-700">
+            info
+          </TabsContent>
+          <TabsContent value="review" className="mt-6 text-sm text-gray-700">
+            reviews.
+          </TabsContent>
+        </Tabs>
+
       </div>
-    </div>
+
+
+
+
+    </div >
   );
 }

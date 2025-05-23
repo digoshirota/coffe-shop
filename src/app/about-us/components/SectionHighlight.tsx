@@ -1,5 +1,6 @@
 // components/SectionHighlight.tsx
 import Image from "next/image";
+import Link from 'next/link';
 
 export default function SectionHighlight() {
   return (
@@ -45,14 +46,20 @@ export default function SectionHighlight() {
           </div>
 
           {/* CTA Button */}
-          <button className="mt-4 px-6 py-3 border border-black text-black font-semibold hover:bg-black hover:text-white transition">
-            BOOK A TABLE
-          </button>
+          <Link
+            href={`/book-table`}
+            className=""
+          >
+            <button className="mt-4 px-6 py-3 border border-black text-black font-semibold hover:bg-black hover:text-white transition">
+              BOOK A TABLE
+            </button>
+          </Link>
+
         </div>
 
         {/* Right side: Image */}
         <div className="md:w-1/2">
-          <Image src="/images/quality-food (2).png" alt="Delicious food" width={500} height={320} className="shadow-lg border-8 border-white" />      
+          <Image src="/images/quality-food (2).png" alt="Delicious food" width={500} height={320} className="shadow-lg border-8 border-white" />
         </div>
       </div>
     </section>

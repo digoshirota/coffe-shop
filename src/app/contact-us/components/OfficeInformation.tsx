@@ -1,9 +1,10 @@
 import { Phone, MapPin, Clock } from "lucide-react";
+import Image from "next/image"
 
 export default function OfficeInformation() {
   return (
-    <section className="bg-gray-100 py-20">
-      <div className="max-w-7xl mx-auto px-4 flex justify-start">
+    <section className="bg-gray-100 relative bg-white min-h-screen flex items-center justify-center px-4 md:px-16 py-16 overflow-hidden">
+      <div className="flex flex-col md:flex-row items-center gap-12 max-w-7xl w-full justify-center">
         <div className="bg-white p-8 rounded-lg shadow-md w-full max-w-md">
           <h2 className="text-xl font-bold mb-2">OFFICE INFORMATION</h2>
           <p className="text-sm text-gray-600 mb-6">
@@ -17,8 +18,8 @@ export default function OfficeInformation() {
             </div>
             <div>
               <h4 className="font-semibold">Phone Number & Email</h4>
-              <p className="text-sm text-gray-600">+(310) 2591 21563</p>
-              <p className="text-sm text-gray-600">help-delish@gmail.com</p>
+              <p className="text-sm text-gray-600">+(310) xxxx xxxxxxx</p>
+              <p className="text-sm text-gray-600">xptoh@xxxpto.com</p>
             </div>
           </div>
 
@@ -36,6 +37,8 @@ export default function OfficeInformation() {
             </div>
           </div>
 
+
+
           {/* Hours Section */}
           <div className="flex items-start gap-4 pt-4">
             <div className="bg-red-100 p-2 rounded">
@@ -48,6 +51,16 @@ export default function OfficeInformation() {
                 Sat, Sun & <span className="text-red-500 font-medium">Holiday Closed</span>
               </p>
             </div>
+          </div>
+        </div>
+        <div>
+          <div className="w-110 h-110 relative">
+            <Image
+              src={`/images/map.png`}
+              alt="food-blog"
+              fill
+              className="object-cover"
+            />
           </div>
         </div>
       </div>

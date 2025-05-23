@@ -1,15 +1,15 @@
 // components/FoodGallery.tsx
 import Image from "next/image";
+import Link from "next/link";
 
-
- const images = [
-    { value: 'Classic Caesar Salad', image: "/images/caesar.png"},
-    { value: 'Braised Short Ribs', image: "/images/Ribs.png" },
-    { value: 'Chicken Masala', image: "/images/Masala.png" },
-    { value: 'Chicken Alfredo Pasta', image: "/images/alfredo.png" },
-    { value: 'Chocolate Lava Cake', image: "/images/chocolate.png" },
-    { value: 'Vegan Buddha Bowl', image: "/images/vegan.png" },
-  ]
+const images = [
+  { value: 'Classic Caesar Salad', image: "/images/caesar.png",postName:"latest-news/caesar"},
+  { value: 'Braised Short Ribs', image: "/images/Ribs.png",postName:"latest-news/Ribs" },
+  { value: 'Chicken Masala', image: "/images/Masala.png",postName:"latest-news/Masala" },
+  { value: 'Chicken Alfredo Pasta', image: "/images/alfredo.png",postName:"latest-news/alfredo" },
+  { value: 'Chocolate Lava Cake', image: "/images/chocolate.png",postName:"latest-news/chocolate" },
+  { value: 'Vegan Buddha Bowl', image: "/images/vegan.png",postName:"latest-news/vegan" },
+]
 
 export default function FoodGallery() {
   return (
@@ -27,22 +27,24 @@ export default function FoodGallery() {
         {/* Grid */}
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
           {images.map((image, i) => (
-            <div
-              key={i}
-              className="relative aspect-square bg-gray-300 group overflow-hidden"
-            >
-              <div className="absolute inset-0 bg-[#e94f1d] bg-cover bg-center  transition duration-300 flex items-center justify-center"
-              style={{
-                backgroundImage: `url('${image.image}')`,
-              }}
+            <Link href={`/${image.postName}`} className="underline hover:text-white">
+              <div
+                key={i}
+                className="relative aspect-square bg-gray-300 group overflow-hidden"
               >
+                <div className="absolute inset-0 bg-[#e94f1d] bg-cover bg-center  transition duration-300 flex items-center justify-center"
+                  style={{
+                    backgroundImage: `url('${image.image}')`,
+                  }}
+                >
+                </div>
+                <div className="absolute inset-0 bg-[#e94f1d] opacity-0 group-hover:opacity-80 transition duration-300 flex items-center justify-center"
+
+                >
+                  <p className="text-sm uppercase tracking-wide mt-2">{image.value}</p>
+                </div>
               </div>
-              <div className="absolute inset-0 bg-[#e94f1d] opacity-0 group-hover:opacity-80 transition duration-300 flex items-center justify-center"
-              
-              >
-                <p className="text-sm uppercase tracking-wide mt-2">{image.value}</p>
-              </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>

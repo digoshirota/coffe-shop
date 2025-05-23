@@ -7,6 +7,7 @@ const posts = [
     title: 'DISCOVERING AFFORDABLE GOURMET EXPERIENCES IN YOUR CITY',
     author: 'Markus Daniel',
     comments: 2,
+    img:"/images/japanese-food.png"
   },
   {
     slug: 'how-restaurants-foster-connections',
@@ -14,6 +15,7 @@ const posts = [
     title: 'HOW RESTAURANTS FOSTER CONNECTIONS AND CREATE MEMORIES',
     author: 'Markus Daniel',
     comments: 2,
+    img:"/images/italian-food.png"
   }
 ];
 
@@ -29,11 +31,14 @@ export default function PopularChefs() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-6xl mx-auto">
         {posts.map((post, idx) => (
           <div key={idx} className="bg-gray-100">
-            <div className="h-40 bg-gray-300 flex items-center justify-center relative">
+            <div className="h-60 bg-gray-300 flex items-center justify-center relative bg-cover bg-center"  style={{
+              backgroundImage: `url('${post.img}')`,
+            }}>
               <span className="absolute top-4 left-4 bg-[#e94f1d] text-white px-2 py-1 text-sm text-center font-bold">
                 {post.date}
               </span>
             </div>
+            
             <div className="p-6">
               <div className="text-sm text-gray-600 flex items-center gap-4 mb-2">
                 <span className="flex items-center gap-1">

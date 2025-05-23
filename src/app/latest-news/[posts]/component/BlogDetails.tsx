@@ -1,11 +1,22 @@
+
+
 import { Calendar, User } from "lucide-react"
 import Sidebar from "../../fragment/Sidebar";
-export default function BlogDetails() {
+import Image from "next/image";
+
+export default function BlogDetails(params: any) {
   return (
     <section className="max-w-7xl mx-auto px-4 py-16 grid grid-cols-1 lg:grid-cols-3 gap-10">
       <article className="lg:col-span-2 space-y-8">
         {/* Image */}
-        <div className="bg-gray-300 w-full h-72" />
+        <div className="w-full h-100 relative">
+          <Image
+            src={`/images/ceo.png`}
+            alt="ceo"
+            fill
+            className="object-cover"
+          />
+        </div>
 
         {/* Meta & Title */}
         <div className="space-y-2">

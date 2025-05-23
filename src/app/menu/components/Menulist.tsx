@@ -1,12 +1,12 @@
 import MenuItem from '../components/MenuItem';
 
 const menuData = [
-  { name: "Wild Mushroom Arancini", description: "Ricotta, goat cheese, beetroot and dateline.", price: "$15.00" },
-  { name: "Truffle Mushroom Risotto", description: "Ricotta, goat cheese, beetroot and dateline.", price: "$15.00" },
-  { name: "Braised Short Ribs", description: "Ricotta, goat cheese, beetroot and dateline.", price: "$15.00" },
-  { name: "Honey Glazed Salmon", description: "Ricotta, goat cheese, beetroot and dateline.", price: "$15.00" },
-  { name: "Mediterranean Quinoa Salad", description: "Ricotta, goat cheese, beetroot and dateline.", price: "$15.00" },
-  { name: "Roasted Vegetable Platter", description: "Ricotta, goat cheese, beetroot and dateline.", price: "$15.00" },
+  { name: "Wild Mushroom Arancini", description: "Ricotta, goat cheese, beetroot and dateline.", price: "$15.00", image:"/images/Masala.png" },
+  { name: "Truffle Mushroom Risotto", description: "Ricotta, goat cheese, beetroot and dateline.", price: "$15.00", image:"/images/Masala.png" },
+  { name: "Braised Short Ribs", description: "Ricotta, goat cheese, beetroot and dateline.", price: "$15.00", image:"/images/Masala.png" },
+  { name: "Honey Glazed Salmon", description: "Ricotta, goat cheese, beetroot and dateline.", price: "$15.00", image:"/images/Masala.png" },
+  { name: "Mediterranean Quinoa Salad", description: "Ricotta, goat cheese, beetroot and dateline.", price: "$15.00", image:"/images/Masala.png" },
+  { name: "Roasted Vegetable Platter", description: "Ricotta, goat cheese, beetroot and dateline.", price: "$15.00", image:"/images/Masala.png" },
 ];
 
 export default function MenuList() {

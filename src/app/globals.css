@@ -145,8 +145,24 @@
     background-repeat: no-repeat;
     background-size: 58px;
   }
+  .tabs-custom button[data-state=active]{
+    border-color: white;
+    background: inherit;
+    box-shadow: none;
+    border-bottom: var(--color-red-600);
+    border-bottom-style: var(--tw-border-style);
+    border-bottom-width: 2px;
+    font-weight: bold;
+    font-size: 15px;
+  }
+  .tabs-custom button[data-state=inactive]{
+    border-bottom: white;
+    border-color: white;
+
+  }
 
 }
 body{
   font-family: 'Jost', sans-serif;
 }
+
