@@ -1,13 +1,11 @@
 'use client';
-import { Calendar, User, Search } from "lucide-react";
+import { Calendar, User } from "lucide-react";
 import Sidebar from "../fragment/Sidebar";
 import Link from "next/link";
 import Image from "next/image";
-
-
 import { useSearchParams } from 'next/navigation';
 
-const posts: any = {
+const posts : any = {
   post1: [
     {
       title: "ICONIC ESTABLISHMENTS ARE REINVENTING 1",
@@ -120,7 +118,7 @@ const posts: any = {
 export default function BlogSection() {
   const searchParams = useSearchParams();
   const page = searchParams.get('page');
-  let detail = posts["post" + page]
+  const detail = posts["post" + page]
   return (
     <section className="max-w-7xl mx-auto px-4 py-16 grid grid-cols-1 lg:grid-cols-3 gap-10">
       {/* Posts */}
@@ -177,6 +175,7 @@ export default function BlogSection() {
             <Link
               href={`/latest-news?page=${n}`}
               className=""
+              key={n}
             >
               <button
                 key={n}

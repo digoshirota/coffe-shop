@@ -1,5 +1,4 @@
 // components/FoodGallery.tsx
-import Image from "next/image";
 import Link from "next/link";
 
 const images = [
@@ -27,9 +26,8 @@ export default function FoodGallery() {
         {/* Grid */}
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
           {images.map((image, i) => (
-            <Link href={`/${image.postName}`} className="underline hover:text-white">
+            <Link href={`/${image.postName}`} className="underline hover:text-white"   key={i}>
               <div
-                key={i}
                 className="relative aspect-square bg-gray-300 group overflow-hidden"
               >
                 <div className="absolute inset-0 bg-[#e94f1d] bg-cover bg-center  transition duration-300 flex items-center justify-center"

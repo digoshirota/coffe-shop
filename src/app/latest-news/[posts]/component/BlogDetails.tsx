@@ -4,7 +4,7 @@ import { Calendar, User } from "lucide-react"
 import Sidebar from "../../fragment/Sidebar";
 import Image from "next/image";
 
-export default function BlogDetails(params: any) {
+export default function BlogDetails() {
   return (
     <section className="max-w-7xl mx-auto px-4 py-16 grid grid-cols-1 lg:grid-cols-3 gap-10">
       <article className="lg:col-span-2 space-y-8">

@@ -57,8 +57,9 @@ export default function LatestNews() {
           <Link
             href={'/latest-news?page=1' + post.link || '#'}
             className="hover:text-red-500 transition"
+            key={index}
           >
-            <div key={index} className="bg-white shadow-md text-left">
+            <div  className="bg-white shadow-md text-left">
               <div className="relative h-[200px]">
                 <div className="flex flex-col items-center space-y-4">
                   <Image

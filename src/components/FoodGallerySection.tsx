@@ -1,6 +1,5 @@
-import { Eye } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import Image from 'next/image';
+
 
 export default function FoodGallerySection() {
   const stats = [
