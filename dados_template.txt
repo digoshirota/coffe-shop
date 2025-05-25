@@ -1,1 +1,9 @@
 Tastely – Next JS Modern Responsive Restaurant Template with Interactive Menu and Online Booking
+
+https://coffe-shop-lovat.vercel.app/
+
+Tastely is a modern, fully responsive website template crafted for restaurants, cafés, bistros, and food-related businesses seeking a professional and elegant online presence. Featuring a clean design, smooth animations, and intuitive navigation, it includes essential sections like interactive menus, online table booking, testimonials, and photo galleries. Built with Next.js 15, Tailwind CSS, and shadcn/ui components, Tastely ensures top performance, fast load times, and clean, modular code. It's easy to customize, mobile-friendly, and SEO-ready—ideal for both developers and restaurant owners looking for a high-converting digital solution that stands out in the crowded food industry. Whether you're launching a new venue or upgrading your current website, Tastely offers everything you need in a modern web template.
+
+Modern and elegant restaurant template built with Next.js 15, Tailwind CSS, and shadcn/ui. Perfect for cafés, bistros, and food businesses. Fully responsive and easy to customize.
+
+restaurant, food, cafe, bistro, modern, elegant, responsive, Next.js, Tailwind CSS, shadcn, SSR, fast, SEO, UI, clean, stylish, gourmet, menu, chef, template
