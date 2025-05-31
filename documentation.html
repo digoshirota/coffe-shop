@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Project Dependencies & Setup Guide</title>
+  <style>
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+        Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+      max-width: 768px;
+      margin: 2rem auto;
+      padding: 1.5rem;
+      color: #1f2937;
+      background-color: #ffffff;
+    }
+
+    h1,
+    h2 {
+      font-weight: 700;
+      color: #111827;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    ul,
+    ol {
+      margin-left: 1.5rem;
+    }
+
+    ul li,
+    ol li {
+      margin-bottom: 0.5rem;
+    }
+
+    a {
+      color: #2563eb;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    code {
+      background-color: #f3f4f6;
+      padding: 0.2rem 0.4rem;
+      border-radius: 4px;
+      font-family: monospace;
+    }
+
+    pre {
+      background-color: #f3f4f6;
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+      font-family: monospace;
+      margin-top: 0.5rem;
+      margin-bottom: 1rem;
+    }
+
+    section {
+      margin-bottom: 3rem;
+    }
+
+    .dependency-item {
+      border: 1px solid #e5e7eb;
+      border-radius: 8px;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      transition: background-color 0.2s ease;
+    }
+
+    .dependency-item:hover {
+      background-color: #f9fafb;
+    }
+
+    .dependency-name {
+      font-size: 1.125rem;
+      font-weight: 600;
+      color: #2563eb;
+      display: block;
+      margin-bottom: 0.25rem;
+    }
+
+    .dependency-desc {
+      font-size: 0.875rem;
+      color: #4b5563;
+    }
+
+    .project-structure {
+      font-family: monospace;
+      background-color: #f3f4f6;
+      padding: 1rem;
+      border-radius: 6px;
+      margin-top: 1rem;
+      line-height: 1.4;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>📦 Project Dependencies</h1>
+
+  <section>
+    <h2>Dependencies</h2>
+    <ul>
+      <li class="dependency-item">
+        <a href="https://www.radix-ui.com/primitives/docs/utilities/slot" target="_blank" class="dependency-name"
+          rel="noopener noreferrer">@radix-ui/react-slot</a>
+        <p class="dependency-desc">Utility for composing components with slots.</p>
+      </li>
+      <li class="dependency-item">
+        <a href="https://www.radix-ui.com/primitives/docs/components/tabs" target="_blank" class="dependency-name"
+          rel="noopener noreferrer">@radix-ui/react-tabs</a>
+        <p class="dependency-desc">Accessible and customizable tab components.</p>
+      </li>
+      <li class="dependency-item">
+        <a href="https://github.com/joe-bell/cva" target="_blank" class="dependency-name"
+          rel="noopener noreferrer">class-variance-authority</a>
+        <p class="dependency-desc">Utility for creating className variations with Tailwind CSS.</p>
+      </li>
+      <li class="dependency-item">
+        <a href="https://github.com/lukeed/clsx" target="_blank" class="dependency-name"
+          rel="noopener noreferrer">clsx</a>
+        <p class="dependency-desc">Conditionally join classNames.</p>
+      </li>
+      <li class="dependency-item">
+        <a href="https://lucide.dev/" target="_blank" class="dependency-name" rel="noopener noreferrer">lucide-react</a>
+        <p class="dependency-desc">Beautiful and consistent icons for React.</p>
+      </li>
+      <li class="dependency-item">
+        <a href="https://nextjs.org/" target="_blank" class="dependency-name" rel="noopener noreferrer">next</a>
+        <p class="dependency-desc">Fullstack React framework for web apps.</p>
+      </li>
+      <li class="dependency-item">
+        <a href="https://react.dev/" target="_blank" class="dependency-name" rel="noopener noreferrer">react</a>
+        <p class="dependency-desc">JavaScript library for building user interfaces.</p>
+      </li>
+      <li class="dependency-item">
+        <a href="https://react.dev/reference/react-dom" target="_blank" class="dependency-name"
+          rel="noopener noreferrer">react-dom</a>
+        <p class="dependency-desc">React DOM renderer.</p>
+      </li>
+      <li class="dependency-item">
+        <a href="https://github.com/dcastil/tailwind-merge" target="_blank" class="dependency-name"
+          rel="noopener noreferrer">tailwind-merge</a>
+        <p class="dependency-desc">Merge Tailwind CSS classes and resolve conflicts.</p>
+      </li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>DevDependencies</h2>
+    <ul>
+      <li class="dependency-item">
+        <a href="https://github.com/eslint/eslintrc" target="_blank" class="dependency-name"
+          rel="noopener noreferrer">@eslint/eslintrc</a>
+        <p class="dependency-desc">Programmatic ESLint config management.</p>
+      </li>
+      <li class="dependency-item">
+        <a href="https://tailwindcss.com/docs/using-with-preprocessors#using-postcss" target="_blank"
+          class="dependency-name" rel="noopener noreferrer">@tailwindcss/postcss</a>
+        <p class="dependency-desc">Integration between Tailwind CSS and PostCSS.</p>
+      </li>
+      <li class="dependency-item">
+        <a href="https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/node" target="_blank"
+          class="dependency-name" rel="noopener noreferrer">@types/node</a>
+        <p class="dependency-desc">TypeScript type definitions for Node.js.</p>
+      </li>
+      <li class="dependency-item">
+        <a href="https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/react" target="_blank"
+          class="dependency-name" rel="noopener noreferrer">@types/react</a>
+        <p class="dependency-desc">TypeScript type definitions for React.</p>
+      </li>
+      <li class="dependency-item">
+        <a href="https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/react-dom" target="_blank"
+          class="dependency-name" rel="noopener noreferrer">@types/react-dom</a>
+        <p class="dependency-desc">TypeScript type definitions for ReactDOM.</p>
+      </li>
+      <li class="dependency-item">
+        <a href="https://eslint.org/" target="_blank" class="dependency-name" rel="noopener noreferrer">eslint</a>
+        <p class="dependency-desc">JavaScript/TypeScript linter.</p>
+      </li>
+      <li class="dependency-item">
+        <a href="https://nextjs.org/docs/app/building-your-application/configuring/eslint" target="_blank"
+          class="dependency-name" rel="noopener noreferrer">eslint-config-next</a>
+        <p class="dependency-desc">ESLint rules and configs recommended for Next.js.</p>
+      </li>
+      <li class="dependency-item">
+        <a href="https://tailwindcss.com/" target="_blank" class="dependency-name"
+          rel="noopener noreferrer">tailwindcss</a>
+        <p class="dependency-desc">Modern utility-first CSS framework.</p>
+      </li>
+      <li class="dependency-item">
+        <a href="https://www.npmjs.com/package/tw-animate-css" target="_blank" class="dependency-name"
+          rel="noopener noreferrer">tw-animate-css</a>
+        <p class="dependency-desc">CSS animations package for Tailwind CSS.</p>
+      </li>
+      <li class="dependency-item">
+        <a href="https://www.typescriptlang.org/" target="_blank" class="dependency-name"
+          rel="noopener noreferrer">typescript</a>
+        <p class="dependency-desc">Typed superset of JavaScript.</p>
+      </li>
+    </ul>
+  </section>
+
+  <section>
+    <h1>☕ Coffee Shop — Project Setup Guide</h1>
+
+    <p>This guide will walk you through installing and running the <code>coffee-shop</code> project locally.</p>
+
+    <h2>📦 Prerequisites</h2>
+    <ul>
+      <li><strong>Node.js</strong> (v18 or higher): <a href="https://nodejs.org" target="_blank">https://nodejs.org</a>
+      </li>
+      <li><strong>npm</strong> or <strong>Yarn</strong> (Node package managers)</li>
+    </ul>
+
+    <h2>🚀 Installation Steps</h2>
+    <ol>
+      <li><strong>Unzip</strong></li>
+      <li>
+        <strong>Install dependencies</strong>
+        <p>Using <code>npm</code>:</p>
+        <pre><code>npm install</code></pre>
+        <p>Or using <code>Yarn</code>:</p>
+        <pre><code>yarn install</code></pre>
+      </li>
+    </ol>
+
+    <h2>🧪 Running the Development Server</h2>
+    <p>Once the dependencies are installed, you can start the development server:</p>
+    <pre><code>npm run dev</code></pre>
+    <p>Or with Yarn:</p>
+    <pre><code>yarn dev</code></pre>
+    <p>Then open your browser at:</p>
+    <pre><code>http://localhost:3000</code></pre>
+    <h2 className="text-2xl font-semibold mt-8 mb-3">🛠️ Build for Production</h2>
+    <pre className="bg-gray-100 p-4 rounded"><code>npm run build</code></pre>
+    <p className="mt-2">Then to start the production server:</p>
+    <pre className="bg-gray-100 p-4 rounded"><code>npm start</code></pre>
+
+    <h2 className="text-2xl font-semibold mt-8 mb-3">🧹 Lint the Project</h2>
+    <pre className="bg-gray-100 p-4 rounded"><code>npm run lint</code></pre>
+
+    <h2 className="text-2xl font-semibold mt-8 mb-3">📁 Project Structure (Simplified)</h2>
+    <div className="bg-gray-100 p-4 rounded font-mono text-sm space-y-1">
+      <p>├── node_modules/ # Project dependencies (auto-generated by npm)</p>
+      <p>├── public/ # Static assets served publicly</p>
+      <p>├── src/ # Main application source code</p>
+      <p>├── .gitignore # Files and folders ignored by Git</p>
+      <p>├── components.json # Component configuration file</p>
+      <p>├── eslint.config.mjs # ESLint configuration for code linting</p>
+      <p>├── next.config.ts # Next.js configuration file</p>
+      <p>├── next-env.d.ts # Type declarations for Next.js</p>
+      <p>├── package.json # Project metadata, scripts, and dependencies</p>
+      <p>├── package-lock.json # Exact versions of installed packages</p>
+      <p>├── postcss.config.mjs # PostCSS configuration for CSS processing</p>
+      <p>├── README.md # Project documentation and setup instructions</p>
+      <p>├── tsconfig.json # TypeScript compiler options</p>
+    </div>
+    <div className="bg-gray-100 p-4 rounded font-mono text-sm space-y-1">
+      <p>├── app/ # Root directory for routes using the App Router</p>
+      <p>│ ├── about-us/ # Page route: /about-us</p>
+      <p>│ ├── book-table/ # Page route: /book-table</p>
+      <p>│ ├── chefs/ # Page route: /chefs</p>
+      <p>│ ├── contact-us/ # Page route: /contact-us</p>
+      <p>│ ├── documentation/ # Page route: /documentation</p>
+      <p>│ ├── food-gallery-posts/ # Page route: /food-gallery-posts</p>
+      <p>│ ├── latest-news/ # Page route: /latest-news</p>
+      <p>│ ├── menu/ # Page route: /menu</p>
+      <p>│ ├── our-chefs/ # Page route: /our-chefs</p>
+      <p>│ ├── shop/ # Page route: /shop</p>
+      <p>│ ├── favicon.ico # Website favicon</p>
+      <p>│ ├── globals.css # Global CSS styles</p>
+      <p>│ ├── layout.tsx # Shared layout wrapper for all routes</p>
+      <p>│ └── page.tsx # Root index page (route: /)</p>
+      <p>├── components/ # Reusable UI components</p>
+      <p>└── lib/ # Utility functions, services, or configurations</p>
+    </div>
+
+
+    <h2>🛠️ Project Structure</h2>
+    <pre class="project-structure">
+/coffee-shop
+├─ /components        # React components
+├─ /pages             # Next.js pages
+├─ /public            # Static assets (images, fonts)
+├─ /styles            # CSS / Tailwind styles
+├─ package.json       # Project metadata and dependencies
+├─ tsconfig.json      # TypeScript config
+├─ next.config.js     # Next.js config
+└─ README.md          # Project documentation
+    </pre>
+  </section>
+
+</body>
+
+</html>

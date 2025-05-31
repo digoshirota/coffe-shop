@@ -15,7 +15,7 @@ export default function DeliciousFoodsSection() {
                     <h2 className="text-3xl md:text-4xl font-extrabold mt-4">OUR DELICIOUS FOODS</h2>
                 </div>
 
-                <div className="flex gap-4 mt-6 md:mt-0">
+                <div className="flex gap-4 mt-6 md:mt-0 flex-wrap">
                     {["All Food", "Breakfast", "Lunch", "Dinner"].map((cat, i) => (
                         <Button
                             key={i}

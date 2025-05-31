@@ -1,7 +1,14 @@
 import Link from "next/link";
 export default function HeroFastFood() {
-    return (
-      <section className="bg-[#2f2f2f] text-white text-center py-32 relative">
+  return (
+    <section className="bg-[#2f2f2f] text-white text-center py-32 relative" style={{
+      backgroundImage: `url('/images/fast-food.png')`,
+      backgroundPosition: 'center',
+      backgroundSize: 'cover'
+    }}>
+      {/* 🔲 Overlay preto translúcido */}
+      <div className="absolute inset-0 bg-black/50 z-0" />
+      <div className="z-10 relative">
         <div className="mb-4">
           <button className="bg-[#e94f1d] text-xs px-4 py-1 rounded-full uppercase tracking-wider">
             Crispy, every bite taste
@@ -15,12 +22,13 @@ export default function HeroFastFood() {
           </span>
         </h1>
         <Link href={`/latest-news`} className="">
-               <button className="mt-4 border border-white px-6 py-2 uppercase text-sm tracking-wide hover:bg-white hover:text-black transition-all">
-                  Read More →
-                </button>
+          <button className="mt-4 border border-white px-6 py-2 uppercase text-sm tracking-wide hover:bg-white hover:text-black transition-all">
+            Read More →
+          </button>
         </Link>
-        
-      </section>
-    );
-  }
-  
+
+      </div>
+
+    </section>
+  );
+}
